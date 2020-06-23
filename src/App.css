@@ -1,38 +1,256 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin: 0px !important;
+  padding: 0px !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.App .particles {
+  position: absolute;
+  right: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.App .skewed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #6c63ff;
+  z-index: 0;
+  -webkit-transform: skewY(-11.5deg);
+          transform: skewY(-11.5deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  border-top: black 20px solid;
+}
+
+.App .sideNav {
+  position: fixed;
+  z-index: 1;
+  top: 20%;
+  right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .sideNav .circle {
+  padding-bottom: 50px;
+}
+
+.App .sideNav .circle:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.App .banner {
+  margin: 100px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2em;
   color: white;
+  font-weight: bolder;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.App .banner img {
+  max-width: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.App .banner #fName {
+  background-color: white;
+  color: #6c63ff;
+  padding: 10px;
+  outline: none;
+  border-radius: 2px;
+  border-right: 10px solid black;
+}
+
+.App .banner p p span {
+  color: red !important;
+}
+
+.App h1 span {
+  color: #6c63ff !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App .cv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 0px;
+}
+
+.App .cv p {
+  font-weight: bold;
+}
+
+.App .cv p span {
+  color: #6c63ff !important;
+}
+
+.App .logoSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.App .logoSection h1 {
+  margin: 50px 0 50px 0;
+}
+
+.App .logoSection .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.App footer {
+  text-align: center;
+  margin-top: 50px;
+  background-color: #6c63ff;
+  color: white;
+  padding: 10px 0px;
+  width: 100%;
+}
+
+.App footer p {
+  margin: 0px !important;
+}
+
+.App footer span {
+  color: red;
+}
+
+.App footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px auto;
+  max-width: 200px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App footer div a {
+  color: black;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: 0 0 5px grey;
+          box-shadow: 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: 2px solid #6c63ff;
+  border-radius: 2px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .react-reveal p {
+    margin: 0px;
+    margin-top: -150px;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .fixed {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .react-reveal {
+    margin: 0px !important;
+  }
+  .banner {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    margin: 0px !important;
+  }
+  .banner p {
+    margin-bottom: 10px !important;
+  }
+  .banner img {
+    border: 5px solid black;
+    border-bottom: 5px solid white;
+    border-left: 5px solid white;
+    min-width: 55%;
+    height: 150px;
+  }
+  .banner .particles {
+    position: absolute;
+    top: -100px !important;
+  }
+}
+/*# sourceMappingURL=App.css.map */
