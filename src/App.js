@@ -1,4 +1,5 @@
 import React from 'react'
+import agent_file from './Oussama Ghamian CV.pdf';
 import Logo from './components/Logo/Logo'
 import Section from './components/Section/Section'
 import { Zoom, Fade, Bounce } from 'react-reveal';
@@ -112,7 +113,7 @@ export default function App() {
         </section>
         <section className='cv' id='cv'>
           <Zoom>
-            <a href='/src/Oussama Ghamian CV.pdf' download><img src={Hire} height={150} /></a>
+            <a href={agent_file} download="Oussama Ghamian CV.pdf"><img src={Hire} height={150} /></a>
             <p>Hire me? Get my <span>CV</span></p>
           </Zoom>
         </section>
